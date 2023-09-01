@@ -4,7 +4,7 @@ My lab in with domain `laby.ooo`
 This is to demo the a Web application interacting with Database. And the traffic is routed by a Reverse Proxy.
 
 The application is a Grafana dashboard to visualize Prometheus metrics
-![Alt text](image.png)
+![Alt text](resources/image.png)
 
 ## Local host file edit
 ```
@@ -27,7 +27,7 @@ This is to make Chrome trust the above SelfSigned custom generated CA
 2. Open Keychain -> Highlight the ca.crt -> Right click -> Get info
 3. Change to Trust
 
-![Alt text](image-1.png)
+![Alt text](resources/image-1.png)
 
 ## Private Key and CSR generating
 ```
@@ -50,4 +50,4 @@ docker-compose up
 3. Default username and password are 'admin'
 4. Add whatever Prometheus dashboard available on Grafana dashboards page
 
-![Alt text](image-2.png)
+![Alt text](resources/image-2.png)

@@ -31,7 +31,7 @@ This is to make Chrome trust the above SelfSigned custom generated CA
 
 ## Private Key and CSR generating
 ```
-openssl req -new -key laby.ooo.key -out laby.ooo.csr -subj "/CN=*.laby.ooo"
+openssl req -new -key laby.ooo.key -out laby.ooo.csr -subj "/CN=laby.ooo"
 ```
 
 ## Sign CSR with Local CA

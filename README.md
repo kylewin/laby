@@ -1,9 +1,9 @@
 # laby
 My lab in [Docker](https://www.docker.com/) with domain `laby.ooo`
 
-This is to demo the a Web application interacting with Database. And the traffic is routed by a Reverse Proxy.
+This is to demo the a Web application interacting with a Database. All is behind a Reverse Proxy.
 
-The application is a Grafana dashboard to visualize Prometheus metrics
+The application is a [Grafana](https://grafana.com/) dashboard to visualize [Prometheus](https://prometheus.io/) metrics. HTTPS SSL traffic is offloaded by [Traefik](https://traefik.io/).
 ![Alt text](resources/image.png)
 
 ## Local host file edit

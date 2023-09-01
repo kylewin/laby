@@ -48,5 +48,6 @@ docker-compose up
 1. Open Chrome or whatever browser
 2. Type https://grafana.laby.oo
 3. Default username and password are 'admin'
+4. Add whatever Prometheus dashboard available on Grafana dashboards page
 
 ![Alt text](image-2.png)

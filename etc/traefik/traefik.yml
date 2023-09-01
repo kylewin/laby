@@ -1,0 +1,21 @@
+providers:
+  docker:
+    exposedByDefault: false
+    watch: true
+  file:
+    fileName: /etc/traefik/traefik.yml
+    watch: true
+
+log:
+  level: DEBUG
+
+entryPoints:
+  web:
+    address: :80
+  websecure:
+    address: :443
+
+tls:
+  certificates:
+    - certFile: /certs/laby.ooo.crt
+      keyFile: /certs/laby.ooo.key

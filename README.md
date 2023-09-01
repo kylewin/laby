@@ -18,6 +18,8 @@ The application is a Grafana dashboard to visualize Prometheus metrics
 ```
 openssl genpkey -algorithm RSA -out ca.key
 openssl req -new -x509 -key ca.key -out ca.crt
+
+# Or can use the existing CA in `certs` folder
 ```
 
 ## Add LocalCA to MacOS Keychain
@@ -31,16 +33,19 @@ This is to make Chrome trust the above SelfSigned custom generated CA
 
 ## Private Key and CSR generating
 ```
+cd certs
 openssl req -new -key laby.ooo.key -out laby.ooo.csr -subj "/CN=laby.ooo"
 ```
 
 ## Sign CSR with Local CA
 ```
+cd certs
 openssl x509 -req -in laby.ooo.csr -CA ./ca/ca.crt -CAkey ./ca/ca.key -CAcreateserial -extfile ./ca/openssl.ss.cnf -out laby.ooo.crt -days 730 -sha256
 ```
 
 ## Run it !
 ```
+# Stand at root of this repo folder
 docker-compose up
 ```
 

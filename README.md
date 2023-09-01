@@ -1,5 +1,5 @@
 # laby
-My lab in with domain `laby.ooo`
+My lab in [Docker](https://www.docker.com/) with domain `laby.ooo`
 
 This is to demo the a Web application interacting with Database. And the traffic is routed by a Reverse Proxy.
 

@@ -14,7 +14,7 @@ The application is a Grafana dashboard to visualize Prometheus metrics
 127.0.0.1 www.laby.ooo
 ```
 
-## Local CA
+## Local CA (can skip if use certs folder)
 ```
 openssl genpkey -algorithm RSA -out ca.key
 openssl req -new -x509 -key ca.key -out ca.crt
@@ -31,13 +31,13 @@ This is to make Chrome trust the above SelfSigned custom generated CA
 
 ![Alt text](resources/image-1.png)
 
-## Private Key and CSR generating
+## Private Key and CSR generating (can skip if use certs folder)
 ```
 cd certs
 openssl req -new -key laby.ooo.key -out laby.ooo.csr -subj "/CN=laby.ooo"
 ```
 
-## Sign CSR with Local CA
+## Sign CSR with Local CA (can skip if use certs folder)
 ```
 cd certs
 openssl x509 -req -in laby.ooo.csr -CA ./ca/ca.crt -CAkey ./ca/ca.key -CAcreateserial -extfile ./ca/openssl.ss.cnf -out laby.ooo.crt -days 730 -sha256
